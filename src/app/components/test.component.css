@@ -1,0 +1,19 @@
+#LeftGreyBox {
+    background-color: grey;
+    height: 300px;
+    width: 40px;
+}
+
+#RightGreyBox {
+    background-color: grey;
+}
+
+#writeuser {
+    color: green;
+}
+
+#userlistitem {
+    background-color: ivory;
+    height: 30px;
+    width: 80px;
+}
