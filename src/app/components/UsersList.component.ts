@@ -7,8 +7,8 @@ import { Component } from '@angular/core'
             {UserListItem}
         </ul>
         <button [style.color]=colors[i] id="ToggleColorsButton">Toggle Colors</button>
-        </div>`
-styleUrls: ['./test.component.css']
+        </div>`,
+    styleUrls: ['./test.component.css']
 })
 
 export class UsersList {

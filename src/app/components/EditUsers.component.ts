@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
         < input #writeUser type = "text" placeholder="new user..." >
             <button (click)="AddUser(writeUser.value)"> Add < /button>
                 < button(click)="RemoveUser()"> Remove < /button>
-                    < /div>`
+                    < /div>`,
     styleUrls: ['./test.component.css']
 })
 
