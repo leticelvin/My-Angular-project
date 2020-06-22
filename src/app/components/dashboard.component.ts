@@ -4,7 +4,7 @@ import { UsersList } from './UsersList.component';
 
 @Component({
     selector: 'app-root',
-    template: '{UsersList}',
+    template: '',
     styleUrls: ['./test.component.css']
 })
 

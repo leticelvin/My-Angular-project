@@ -4,6 +4,12 @@
     width: 40px;
 }
 
+#ToggleColorsButton {
+    background-color: cyan;
+    height: 30px;
+    width: 80px;
+}
+
 #RightGreyBox {
     background-color: grey;
 }
