@@ -1,7 +1,7 @@
 import { Component } from '@angular/core'
 
 @Component({
-    selector: " ",
+    selector: "app-root",
     template: `<div id="LeftGreyBox">
         <ul>
             {UserListItem}

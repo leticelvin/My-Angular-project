@@ -3,7 +3,7 @@ import { EditUsers } from './EditUsers.component';
 import { UsersList } from './UsersList.component';
 
 @Component({
-    selector: '',
+    selector: 'app-root',
     template: '{UsersList}',
     styleUrls: ['./test.component.css']
 })

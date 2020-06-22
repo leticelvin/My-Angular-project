@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-    selector: " ",
+    selector: "app-root",
     template: `<div id="RightGreyBox">
         < input #writeUser type = "text" placeholder="new user..." >
             <button (click)="AddUser(writeUser.value)"> Add < /button>
