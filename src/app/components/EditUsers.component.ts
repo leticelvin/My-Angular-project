@@ -4,8 +4,8 @@ import { Component } from '@angular/core';
     selector: "app-root",
     template: `<div id="RightGreyBox">
         < input #writeUser type = "text" placeholder="new user..." >
-            <button (click)="AddUser(writeUser.value)"> Add < /button>
-                < button(click)="RemoveUser()"> Remove < /button>
+            <button id="greenbutton" (click)="AddUser(writeUser.value)"> Add < /button>
+                < button id="redbutton" (click)="RemoveUser()"> Remove < /button>
                     < /div>`,
     styleUrls: ['./test.component.css']
 })

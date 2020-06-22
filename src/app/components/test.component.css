@@ -2,6 +2,8 @@
     background-color: grey;
     height: 300px;
     width: 40px;
+    margin-left: 70px;
+    margin-top: 70px;
 }
 
 #ToggleColorsButton {
@@ -12,10 +14,23 @@
 
 #RightGreyBox {
     background-color: grey;
+    height: 110px;
+    width: 60px;
+    margin-top: 140px;
 }
 
 #writeuser {
     color: green;
+}
+
+#greenbutton {
+    background-color: green;
+    height: 30px;
+}
+
+#redbutton {
+    background-color: red;
+    height: 30px;
 }
 
 #userlistitem {
