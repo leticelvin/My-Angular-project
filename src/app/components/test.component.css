@@ -12,6 +12,10 @@
     width: 80px;
 }
 
+body {
+    margin: 0;
+}
+
 #RightGreyBox {
     background-color: grey;
     height: 110px;
@@ -19,8 +23,9 @@
     margin-top: 140px;
 }
 
-#writeuser {
-    color: green;
+#writeUser {
+    background-color: white;
+    width: 90px;
 }
 
 #greenbutton {

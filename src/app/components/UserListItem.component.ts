@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
     selector: 'app-root',
@@ -9,4 +9,5 @@ import { Component } from '@angular/core';
 export class UserListItem {
     public TextColor = "green"
     public name: string = "Tanri en Buyuktur"
+    @Input('parentData') public user;
 }
