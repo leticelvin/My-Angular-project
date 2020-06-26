@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { UsersList } from './UsersList.component';
 
 @Component({
@@ -10,5 +10,9 @@ import { UsersList } from './UsersList.component';
 export class DashBoard {
     public userList = ["Leanne Graham", "Ervin Howell"]
 
+    @Input()
+
     adduser() { }
+
+    removeuser() { }
 }
