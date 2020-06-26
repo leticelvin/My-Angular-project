@@ -1,10 +1,11 @@
-import { Component, Input } from '@angular/core'
+import { Component, Input } from '@angular/core';
+import { UserListItem } from './UserListItem.component'
 
 @Component({
     selector: "app-root",
     template: `<div id="LeftGreyBox">
         <ul>
-            {UserListItem}
+            {UserListItem}}
         </ul>
         <button [style.color]=colors[i] id="ToggleColorsButton">Toggle Colors</button>
         </div>`,
@@ -12,6 +13,6 @@ import { Component, Input } from '@angular/core'
 })
 
 export class UsersList {
-    @Input() users: Array;
+    @Input() userList: Array;
 
 }

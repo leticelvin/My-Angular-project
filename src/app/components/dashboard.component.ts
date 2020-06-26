@@ -8,7 +8,9 @@ import { UsersList } from './UsersList.component';
 })
 
 export class DashBoard {
-    public userList = ["Leanne Graham", "Ervin Howell"]
+
+    userList: Array<string>;
+    userList = new Array("Leanne Graham", "Ervin Howell");
 
     @Input()
 

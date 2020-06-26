@@ -4,7 +4,7 @@ import { Component, Output, EventEmitter, ElementRef, ViewChild } from '@angular
     selector: "app-root",
     template: `<div id="RightGreyBox">
         < input #inputfield id="writeUser" type="text" value="new user..." >
-            <button id="greenbutton" (click)="AddUser(writeUser.value)"> Add < /button>
+            <button id="greenbutton" (click)="AddUser(writeUser)"> Add < /button>
                 < button id="redbutton" (click)="RemoveUser()"> Remove < /button>
                     < /div>`,
     styleUrls: ['./test.component.css']
@@ -16,7 +16,7 @@ export class EditUsers {
 
     @Output() public childEvent = new EventEmitter();
 
-    @Output() AddUser(value) {
+    @Output() AddUser(_value: any) {
         this.nameElementRef.nativeElement.value
     }
 
