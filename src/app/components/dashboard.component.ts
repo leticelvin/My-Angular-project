@@ -1,16 +1,16 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output } from '@angular/core';
 import { UsersList } from './UsersList.component';
 
 @Component({
     selector: 'app-root',
-    template: '{UsersList}',
+    template: '{{UsersList}}',
     styleUrls: ['./test.component.css']
 })
 
 export class DashBoard {
 
     /*userList: Array<string>;*/
-    userList = new Array("Leanne Graham", "Ervin Howell");
+    @Output() userList: string[] = ["Leanne Graham", "Ervin Howell"];
 
     @Input()
 
