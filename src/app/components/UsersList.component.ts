@@ -1,4 +1,4 @@
-import { Component, Input, Output } from '@angular/core';
+import { Component, Input, Output, OnInit, EventEmitter } from '@angular/core';
 import { UserListItem } from './UserListItem.component'
 
 @Component({
@@ -14,6 +14,14 @@ import { UserListItem } from './UserListItem.component'
 export class UsersList {
     @Input('userList') userList: any
 
-    @Output()
+    @Output() public Event = new EventEmitter();
 
-}
+    ngOnInit() {
+
+    }
+
+    fireEvent() {
+        this.Event.emit("Hello!");
+    }
+
+}    
