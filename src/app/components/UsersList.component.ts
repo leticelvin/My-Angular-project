@@ -15,15 +15,18 @@ export class UsersList {
     @Input('userList') userList: any
 
     @Output() public Event = new EventEmitter();
+    @Output() public ColorToggle = new EventEmitter();
 
-    togglecolor() { }
+    togglecolor() {
+        this.ColorToggle.emit("Color has changed")
+    }
 
     ngOnInit() {
 
     }
 
     fireEvent() {
-        this.Event.emit("Hello!");
+        this.Event.emit("Hello!")
     }
 
 }    
