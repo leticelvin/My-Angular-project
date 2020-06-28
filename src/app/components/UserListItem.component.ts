@@ -10,5 +10,5 @@ export class UserListItem {
     public name: string = "Tanri en Buyuktur"
 
     @Input('parentData') public user;
-    @Input() public TextColor: String;
+    @Input('TextColor') public textcolor: String;
 }

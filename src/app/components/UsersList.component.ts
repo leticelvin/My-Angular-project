@@ -14,7 +14,7 @@ import { UserListItem } from './UserListItem.component'
 export class UsersList {
     @Input('userList') userList: any
 
-    @Output() public Event = new EventEmitter();
+    @Output() public SendUser = new EventEmitter();
     @Output() public ColorToggle = new EventEmitter();
 
     public TextColor = "green";
@@ -35,7 +35,7 @@ export class UsersList {
     }
 
     fireEvent() {
-        this.Event.emit("Hello!")
+        this.SendUser.emit("Hello!")
     }
 
 }    
