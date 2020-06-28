@@ -1,16 +1,19 @@
-import { Component, Input, Output } from '@angular/core';
-import { UsersList } from './UsersList.component';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
     selector: 'app-root',
-    template: '{{UsersList}}',
+    template: '',
     styleUrls: ['./test.component.css']
 })
 
 export class DashBoard {
 
     /*userList: Array<string>;*/
-    @Output() userList: string[] = ["Leanne Graham", "Ervin Howell"];
+    @Output() public Event = new EventEmitter();
+
+    userList: string[] = ["Leanne Graham", "Ervin Howell"];
+
+    constructor() { }
 
     @Input()
 

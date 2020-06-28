@@ -7,7 +7,7 @@ import { UserListItem } from './UserListItem.component'
         <ul>
             {{UserListItem}}
         </ul>
-        <button [style.color]=colors[i] id="ToggleColorsButton">Toggle Colors</button></div>`,
+        <button onclick="toggleColor()" id="ToggleColorsButton">Toggle Colors</button></div>`,
     styleUrls: ['./test.component.css']
 })
 
@@ -15,6 +15,8 @@ export class UsersList {
     @Input('userList') userList: any
 
     @Output() public Event = new EventEmitter();
+
+    togglecolor() { }
 
     ngOnInit() {
 
