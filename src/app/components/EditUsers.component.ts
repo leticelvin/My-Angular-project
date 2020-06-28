@@ -4,7 +4,7 @@ import { Component, Output, EventEmitter, ElementRef, ViewChild } from '@angular
     selector: "app-root",
     template: `<div id="RightGreyBox">
         < input #inputfield id="writeUser" type="text" value="new user..." >
-            <button id="greenbutton" (click)="AddUser(writeUser)"> Add < /button>
+            <button id="greenbutton" (click)="addUser(writeUser)"> Add < /button>
                 < button id="redbutton" (click)="RemoveUser()"> Remove < /button>
                     < /div>`,
     styleUrls: ['./test.component.css']
@@ -14,17 +14,21 @@ export class EditUsers {
 
     @ViewChild('inputfield', { static: false }) nameElementRef: ElementRef;
 
-    @Output() public childEvent = new EventEmitter();
+    @Output() public AddUser = new EventEmitter();
 
-    @Output() AddUser(_value: any) {
-        this.nameElementRef.nativeElement.value
+    @Output() public removeUser = new EventEmitter();
+
+    public newUser: String;
+    public removeStatus = true;
+
+    addUser(_value: any) {
+        this.newUser = this.nameElementRef.nativeElement.value;
+        this.AddUser.emit(this.newUser);
     }
 
-    @Output() RemoveUser() {
+    RemoveUser() {
         /* Delete last user */
+        this.removeUser.emit(this.removeStatus);
     }
 
-    fireEvent() {
-        this.childEvent.emit("Hey Codevolution");
-    }
 }

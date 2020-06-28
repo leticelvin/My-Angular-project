@@ -15,9 +15,7 @@ export class DashBoard {
 
     constructor() { }
 
-    @Input()
+    @Input('newUser') public NewUser: String;
 
-    adduser() { }
-
-    removeuser() { }
+    @Input('removeStatus') public removal: String;
 }

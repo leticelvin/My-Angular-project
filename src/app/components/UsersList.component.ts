@@ -17,8 +17,17 @@ export class UsersList {
     @Output() public Event = new EventEmitter();
     @Output() public ColorToggle = new EventEmitter();
 
+    public TextColor = "green";
+
     togglecolor() {
-        this.ColorToggle.emit("Color has changed")
+
+        if (this.TextColor = "red") {
+            this.TextColor = "green";
+        } else {
+            this.TextColor = "red";
+        }
+
+        this.ColorToggle.emit(this.TextColor)
     }
 
     ngOnInit() {
