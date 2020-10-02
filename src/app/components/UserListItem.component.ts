@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 
 @Component({
     selector: "app-root",
-    template: `<li class="userlistitem" [style.color]="TextColor">{{user}}</li>`,
+    template: `<li class="userlistitem" [style.color]="textcolor">{{user}}</li>`,
     styleUrls: ['./test.component.css']
 })
 

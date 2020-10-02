@@ -1,13 +1,14 @@
 import { Component, Input, Output, OnInit, EventEmitter } from '@angular/core';
-import { UserListItem } from './UserListItem.component'
+import { UserListItem } from './UserListItem.component';
 
 @Component({
     selector: "app-root",
     template: `<div id="LeftGreyBox">
         <ul>
-            {{UserListItem}}
+            {{ UserListItem }}
         </ul>
-        <button onclick="toggleColor()" id="ToggleColorsButton">Toggle Colors</button></div>`,
+        <button onclick="toggleColor()" id="ToggleColorsButton">Toggle Colors</button>
+        </div>`,
     styleUrls: ['./test.component.css']
 })
 
