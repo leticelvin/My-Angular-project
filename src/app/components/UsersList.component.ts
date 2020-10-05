@@ -1,11 +1,11 @@
-import { Component, Input, Output, OnInit, EventEmitter } from '@angular/core';
+import { Component, Input, Output, OnInit, EventEmitter, ContentChildren } from '@angular/core';
 import { UserListItem } from './UserListItem.component';
 
 @Component({
     selector: "app-root",
     template: `<div id="LeftGreyBox">
         <ul>
-            {{ UserListItem }}
+            {{ UserListItemComponent }}
         </ul>
         <button onclick="toggleColor()" id="ToggleColorsButton">Toggle Colors</button>
         </div>`,
@@ -14,11 +14,15 @@ import { UserListItem } from './UserListItem.component';
 
 export class UsersList {
     @Input('userList') userList: any
+    @ContentChildren(UserListItem)
+    UserListItemComponent: UserListItem;
 
     @Output() public SendUser = new EventEmitter();
     @Output() public ColorToggle = new EventEmitter();
 
     public TextColor = "green";
+
+    constructor(){}
 
     togglecolor() {
 
