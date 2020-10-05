@@ -1,7 +1,7 @@
 import { Component, Output, EventEmitter, ElementRef, ViewChild } from '@angular/core';
 
 @Component({
-    selector: "app-root",
+    selector: "EditUsers",
     template: `<div id="RightGreyBox">
         < input #inputfield id="writeUser" type="text" value="new user..." >
             <button id="greenbutton" (click)="addUser($event)"> Add < /button>

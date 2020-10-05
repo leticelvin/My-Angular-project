@@ -1,7 +1,7 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
-    selector: 'app-root',
+    selector: 'DashBoard',
     template: '',
     styleUrls: ['./test.component.css']
 })

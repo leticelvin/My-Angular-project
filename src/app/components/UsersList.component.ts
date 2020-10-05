@@ -1,8 +1,8 @@
-import { Component, Input, Output, OnInit, EventEmitter, ContentChildren } from '@angular/core';
+import { Component, Input, Output, EventEmitter, ContentChildren } from '@angular/core';
 import { UserListItem } from './UserListItem.component';
 
 @Component({
-    selector: "app-root",
+    selector: "UsersList",
     template: `<div id="LeftGreyBox">
         <ul>
             {{ UserListItemComponent }}
@@ -35,9 +35,6 @@ export class UsersList {
         this.ColorToggle.emit(this.TextColor)
     }
 
-    ngOnInit() {
-
-    }
 
     fireEvent() {
         this.SendUser.emit("Hello!")
