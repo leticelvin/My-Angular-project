@@ -13,6 +13,10 @@ export class DashBoard {
 
     userList: string[] = ["Leanne Graham", "Ervin Howell"];
 
+    sendArray() {
+        this.Event.emit(this.userList)
+    }
+
     constructor() { }
 
     @Input('newUser') public NewUser: String;

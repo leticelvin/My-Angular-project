@@ -25,6 +25,7 @@ export class EditUsers {
     addUser(_value: String) {
         this.newUser = this.nameElementRef.nativeElement.value;
         this.AddUser.emit(this.newUser);
+        console.log(this.newUser)
     }
 
     RemoveUser() {
