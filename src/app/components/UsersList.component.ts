@@ -7,7 +7,7 @@ import { UserListItem } from './UserListItem.component';
         <ul>
             {{ UserListItemComponent }}
         </ul>
-        <button onclick="toggleColor()" id="ToggleColorsButton">Toggle Colors</button>
+        <button onclick="toggleColor()" id="ToggleColorsButton"><h4>Toggle Colors</h4></button>
         </div>`,
     styleUrls: ['./test.component.css']
 })

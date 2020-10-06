@@ -5,8 +5,8 @@ import { Component, Output, EventEmitter, ElementRef, ViewChild } from '@angular
     template: `
             <div id="RightGreyBox">
                 <input #inputfield id="writeUser" type="text" value="new user..." >
-                <button id="greenbutton" (click)="addUser($event)">Add</button>
-                <button id="redbutton" (click)="RemoveUser()">Remove</button>
+                <button id="greenbutton" (click)="addUser($event)"><h4>Add</h4></button>
+                <button id="redbutton" (click)="RemoveUser()"><h4>Remove</h4></button>
             </div>`,
     styleUrls: ['./test.component.css']
 })
@@ -15,7 +15,7 @@ export class EditUsers {
 
     @ViewChild('inputfield', { static: false }) nameElementRef: ElementRef;
 
-    @Output() public AddUser = new EventEmitter<String>(); //Here is the problem
+    @Output() public AddUser = new EventEmitter<String>(); 
 
     @Output() public removeUser = new EventEmitter();
 
