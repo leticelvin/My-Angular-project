@@ -2,11 +2,12 @@ import { Component, Output, EventEmitter, ElementRef, ViewChild } from '@angular
 
 @Component({
     selector: "EditUsers",
-    template: `<div id="RightGreyBox">
-        < input #inputfield id="writeUser" type="text" value="new user..." >
-            <button id="greenbutton" (click)="addUser($event)"> Add < /button>
-                < button id="redbutton" (click)="RemoveUser()"> Remove < /button>
-                    < /div>`,
+    template: `
+            <div id="RightGreyBox">
+                <input #inputfield id="writeUser" type="text" value="new user..." >
+                <button id="greenbutton" (click)="addUser($event)">Add</button>
+                <button id="redbutton" (click)="RemoveUser()">Remove</button>
+            </div>`,
     styleUrls: ['./test.component.css']
 })
 
