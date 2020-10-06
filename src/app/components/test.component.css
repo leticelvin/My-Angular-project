@@ -1,7 +1,7 @@
 #LeftGreyBox {
-    background-color: grey;
+    background-color: rgb(206, 204, 204);
     height: 300px;
-    width: 40px;
+    width: 240px;
     margin-left: 70px;
     margin-top: 70px;
 }
@@ -17,9 +17,9 @@ body {
 }
 
 #RightGreyBox {
-    background-color: grey;
+    background-color: rgb(206, 204, 204);
     height: 110px;
-    width: 60px;
+    width: 260px;
     margin-top: 140px;
 }
 
