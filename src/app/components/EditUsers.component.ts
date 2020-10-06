@@ -30,6 +30,7 @@ export class EditUsers {
 
     RemoveUser() {
         /* Delete last user */
+        console.log("Hello")
         this.removeUser.emit(this.removeStatus);
     }
 
