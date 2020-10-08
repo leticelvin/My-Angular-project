@@ -7,7 +7,7 @@ import { UserListItem } from './UserListItem.component';
         <ul>
             {{ UserListItemComponent }}
         </ul>
-        <button onclick="toggleColor()" id="ToggleColorsButton"><h4>Toggle Colors</h4></button>
+        <button (click)="toggleColor()" id="ToggleColorsButton"><h4>Toggle Colors</h4></button>
         </div>`,
     styleUrls: ['./test.component.css']
 })
@@ -19,19 +19,28 @@ export class UsersList {
 
     @Output() public ColorToggle = new EventEmitter();
 
-    public TextColor = "green";
+    public Toggled: Boolean = true;
+    public TextColor: String = "red";
 
     constructor(){}
 
     toggleColor() {
 
-        if (this.TextColor = "red") {
+        if (this.Toggled != false) {
+            this.Toggled = false;
             this.TextColor = "green";
-        } else {
+            this.ColorToggle.emit(this.TextColor)
+            console.log(this.TextColor)
+            console.log(this.Toggled)
+        } 
+        else {
+            this.Toggled = true;
             this.TextColor = "red";
+            this.ColorToggle.emit(this.TextColor)
+            console.log(this.TextColor)
+            console.log(this.Toggled)
         }
 
-        this.ColorToggle.emit(this.TextColor)
     }
 
 }    
