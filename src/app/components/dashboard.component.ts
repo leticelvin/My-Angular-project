@@ -11,24 +11,25 @@ export class DashBoard implements OnInit {
     /*userList: Array<string>;*/
     @Output() public Event = new EventEmitter();
 
-    userList: string[] = ["Leanne Graham", "Ervin Howell", "Clementine Bauch", "Patricia Lebsack"];
+    public userlist: Array<string> = ["Leanne Graham", "Ervin Howell", "Clementine Bauch", "Patricia Lebsack"];
 
     ngOnInit() {
-        this.Event.emit(this.userList)
-        alert(this.userList)
+        this.Event.emit(this.userlist)
+        alert(this.userlist)
     }
 
     constructor() { }
 
+    @Input('removeStatus') public removal: String;
     @Input('newUser') public NewUser: string;
 
     pushuser() {
-    this.userList.unshift(this.NewUser)
+    this.userlist.unshift(this.NewUser)
     }
 
     removeuser() {
-    this.userList.pop;    
+    this.userlist.pop;    
     }
 
-    @Input('removeStatus') public removal: String;
+
 }
