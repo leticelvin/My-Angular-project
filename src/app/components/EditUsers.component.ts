@@ -19,7 +19,7 @@ export class EditUsers {
 
     @Output() public removeUser = new EventEmitter();
 
-    public newUser: String;
+    public newUser: string;
     public removeStatus = true;
 
     addUser(_value: String) {

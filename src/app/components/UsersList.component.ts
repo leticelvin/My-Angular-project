@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter, ContentChildren } from '@angular/core';
+import { Component, Output, EventEmitter, ContentChildren } from '@angular/core';
 import { UserListItem } from './UserListItem.component';
 
 @Component({
@@ -13,18 +13,17 @@ import { UserListItem } from './UserListItem.component';
 })
 
 export class UsersList {
-    @Input('userList') userList: any
+    //@Input('userList') userList: any
     @ContentChildren(UserListItem)
     UserListItemComponent: UserListItem;
 
-    @Output() public SendUser = new EventEmitter();
     @Output() public ColorToggle = new EventEmitter();
 
     public TextColor = "green";
 
     constructor(){}
 
-    togglecolor() {
+    toggleColor() {
 
         if (this.TextColor = "red") {
             this.TextColor = "green";
@@ -33,11 +32,6 @@ export class UsersList {
         }
 
         this.ColorToggle.emit(this.TextColor)
-    }
-
-
-    fireEvent() {
-        this.SendUser.emit("Hello!")
     }
 
 }    
