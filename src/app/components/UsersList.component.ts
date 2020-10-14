@@ -13,14 +13,17 @@ import { UserListItem } from './UserListItem.component';
 })
 
 export class UsersList {
+    
+    // <UserListItem [userList]="userlist">
+
+    public Toggled: Boolean = true;
+    public TextColor: String = "red";
+    
     //@Input('userList') userList: any
     @ContentChildren(UserListItem)
     UserListItemComponent: UserListItem;
 
     @Output() public ColorToggle = new EventEmitter();
-
-    public Toggled: Boolean = true;
-    public TextColor: String = "red";
 
     constructor(){}
 

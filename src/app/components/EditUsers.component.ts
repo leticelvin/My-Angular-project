@@ -13,14 +13,15 @@ import { Component, Output, EventEmitter, ElementRef, ViewChild } from '@angular
 
 export class EditUsers {
 
+    public newUser: string;
+    public removeStatus = true;
+
     @ViewChild('inputfield', { static: false }) nameElementRef: ElementRef;
 
     @Output() public AddUser = new EventEmitter<String>(); 
 
     @Output() public removeUser = new EventEmitter();
 
-    public newUser: string;
-    public removeStatus = true;
 
     addUser(_value: String) {
         this.newUser = this.nameElementRef.nativeElement.value;
