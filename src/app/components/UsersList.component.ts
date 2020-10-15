@@ -17,7 +17,9 @@ import { UserListItem } from './UserListItem.component';
 })
 
 export class UsersList {
-    
+    //UsersList är "containern" för användarlistan och Toggle-knappen.
+    //Userslist innehåller metoden för färgbytet av texten samt de properties som behövs för toggle-knappen
+
     public Toggled: Boolean = true;
     public TextColor: String = "red";
     

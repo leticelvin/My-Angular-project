@@ -7,10 +7,10 @@ import { Component, Input } from '@angular/core';
 })
 
 export class UserListItem {
+
+    //Den här komponenten tar emot två typer av data: Användare och textfärg.
     
     @Input('userlist') public user: Array<string>; // Imports the user list array from the dashboard component
     @Input('Textcolor') public textcolor: String; //  Imports the color of the text as a string
-    @Input('newuser') public Newuser: String;    //   Imports new user
-
     
 }

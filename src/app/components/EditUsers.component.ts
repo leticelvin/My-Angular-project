@@ -13,6 +13,8 @@ import { Component, Output, EventEmitter, ElementRef, ViewChild } from '@angular
 
 export class EditUsers {
 
+    //EditUsers tar emot inmatning från input-fältet och skickar det till DashBoard
+
     public newUser: string;
     public removeStatus = true;
 

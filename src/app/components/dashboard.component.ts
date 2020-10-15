@@ -7,7 +7,10 @@ import { Component, Output, EventEmitter, OnInit } from '@angular/core';
 })
 
 export class DashBoard implements OnInit {
-
+    //DashBoard är parent-komponenten för alla komponenter och tar emot.... 
+    //...vilken användare som ska läggas till i listan från EditUsers
+    //Och innehåller arrayen som är en lista över användare.
+    
     public userList: Array<string> = ["Leanne Graham", "Ervin Howell", "Clementine Bauch", "Patricia Lebsack"];
     public newUser: string;
 
