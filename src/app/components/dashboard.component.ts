@@ -1,36 +1,32 @@
-import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
+import { Component, Output, EventEmitter, OnInit } from '@angular/core';
 
 @Component({
     selector: 'DashBoard',
-    template: '<UsersList [userlist]="userList"></UsersList><EditUsers></EditUsers>',
+    template: '<UsersList [userlist]="userList"></UsersList><EditUsers (AddUser)="receiveMessage($event)" (removeUser)="Remove()"></EditUsers>',
     styleUrls: ['./test.component.css']
 })
 
 export class DashBoard implements OnInit {
 
-    // <UsersList [userlist]="userList">
-
     public userList: Array<string> = ["Leanne Graham", "Ervin Howell", "Clementine Bauch", "Patricia Lebsack"];
+    public newUser: string;
 
     @Output() public Event = new EventEmitter();
-
-    @Input('removeStatus') public removal: String;
-    @Input('newUser') public NewUser: string;
-
-    constructor() { }
 
     ngOnInit() {
         this.Event.emit(this.userList)
     }
 
-    pushuser() {
-    this.userList.unshift(this.NewUser)
-    this.Event.emit(this.userList)
+    receiveMessage($event) {
+        this.newUser = $event
+        this.userList.unshift(this.newUser)
+        this.Event.emit(this.userList)
     }
 
-    removeuser() {
-    this.userList.pop;    
+    Remove() {
+        this.userList.pop();
+        console.log(this.userList)
+        this.Event.emit(this.userList)  
     }
-
 
 }

@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
     selector: "UserListItem",
@@ -6,16 +6,11 @@ import { Component, Input, OnInit } from '@angular/core';
     styleUrls: ['./test.component.css']
 })
 
-export class UserListItem implements OnInit {
-    /*@Input('userList') public user: Array<string>;*/ 
-    /*<li *ngFor="let user of userList"*/ 
-    /* string[] */ 
-    @Input('userlist') public user: Array<string>; //Imports the user list array from the dashboard component
-    @Input('Textcolor') public textcolor: String; // Imports the color of the text as a string
+export class UserListItem {
+    
+    @Input('userlist') public user: Array<string>; // Imports the user list array from the dashboard component
+    @Input('Textcolor') public textcolor: String; //  Imports the color of the text as a string
+    @Input('newuser') public Newuser: String;    //   Imports new user
 
-    ngOnInit() {
-        console.log("UserListItem: " + this.user)
-        console.log("UserListItem textcolor : " + this.textcolor)
-    }
     
 }

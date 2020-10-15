@@ -16,9 +16,10 @@ export class EditUsers {
     public newUser: string;
     public removeStatus = true;
 
+    //The ViewChild property gets the name of the inputfield in the template and assigns it to a property
     @ViewChild('inputfield', { static: false }) nameElementRef: ElementRef;
 
-    @Output() public AddUser = new EventEmitter<String>(); 
+    @Output() public AddUser = new EventEmitter<string>(); 
 
     @Output() public removeUser = new EventEmitter();
 
@@ -26,12 +27,10 @@ export class EditUsers {
     addUser(_value: String) {
         this.newUser = this.nameElementRef.nativeElement.value;
         this.AddUser.emit(this.newUser);
-        console.log(this.newUser)
     }
 
     RemoveUser() {
         /* Delete last user */
-        console.log("Hello")
         this.removeUser.emit(this.removeStatus);
     }
 

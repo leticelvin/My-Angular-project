@@ -4,19 +4,20 @@ import { UserListItem } from './UserListItem.component';
 @Component({
     selector: "UsersList",
     template: `<div id="LeftGreyBox">
-        <ul>
-            <UserListItem [userlist]="user" [Textcolor]="TextColor"></UserListItem>
-        </ul>
-        <button (click)="toggleColor()" id="ToggleColorsButton"><h4>Toggle Colors</h4></button>
-        </div>`,
+                    <ul>
+                        <UserListItem [userlist]="user" [Textcolor]="TextColor"></UserListItem>
+                    </ul>
+                    <div id="dynamicfiller">
+                        <button (click)="toggleColor()" id="ToggleColorsButton">
+                            <h4>Toggle Colors</h4>
+                        </button>
+                    </div>
+                </div>`,
     styleUrls: ['./test.component.css']
 })
 
 export class UsersList {
     
-    // <UserListItem [userlist]="user">
-    // <UserListItem [Textcolor]="TextColor">
-
     public Toggled: Boolean = true;
     public TextColor: String = "red";
     
@@ -27,16 +28,14 @@ export class UsersList {
 
     @Output() public ColorToggle = new EventEmitter();
 
-    constructor(){}
-
     toggleColor() {
 
         if (this.Toggled != false) {
             this.Toggled = false;
             this.TextColor = "green";
             this.ColorToggle.emit(this.TextColor)
-        } 
-        else {
+        
+        } else {
             this.Toggled = true;
             this.TextColor = "red";
             this.ColorToggle.emit(this.TextColor)
