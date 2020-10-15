@@ -11,7 +11,7 @@ export class UserListItem implements OnInit {
     /*<li *ngFor="let user of userList"*/ 
     /* string[] */ 
     @Input('userlist') public user: Array<string>; //Imports the user list array from the dashboard component
-    @Input('TextColor') public textcolor: String; // Imports the color of the text as a string
+    @Input('Textcolor') public textcolor: String; // Imports the color of the text as a string
 
     ngOnInit() {
         console.log("UserListItem: " + this.user)

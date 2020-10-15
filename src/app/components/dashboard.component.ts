@@ -2,13 +2,15 @@ import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
 
 @Component({
     selector: 'DashBoard',
-    templateUrl: 'todo.component.html',
+    template: '<UsersList [userlist]="userList"></UsersList><EditUsers></EditUsers>',
     styleUrls: ['./test.component.css']
 })
 
 export class DashBoard implements OnInit {
 
-    public userlist: Array<string> = ["Leanne Graham", "Ervin Howell", "Clementine Bauch", "Patricia Lebsack"];
+    // <UsersList [userlist]="userList">
+
+    public userList: Array<string> = ["Leanne Graham", "Ervin Howell", "Clementine Bauch", "Patricia Lebsack"];
 
     @Output() public Event = new EventEmitter();
 
@@ -18,16 +20,16 @@ export class DashBoard implements OnInit {
     constructor() { }
 
     ngOnInit() {
-        this.Event.emit(this.userlist)
-        alert(this.userlist)
+        this.Event.emit(this.userList)
     }
 
     pushuser() {
-    this.userlist.unshift(this.NewUser)
+    this.userList.unshift(this.NewUser)
+    this.Event.emit(this.userList)
     }
 
     removeuser() {
-    this.userlist.pop;    
+    this.userList.pop;    
     }
 
 

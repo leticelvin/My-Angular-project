@@ -8,6 +8,23 @@
     border-radius: 10px;
 }
 
+ul {
+    list-style-type: none;
+}
+
+p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+li {
+    background-color: white;
+    padding: 1px;
+    margin-bottom: 4px;
+    text-align: center;
+    border-radius: 4px;
+}
+
 #ToggleColorsButton {
     background-color: rgb(58, 191, 199);
     height: 30px;

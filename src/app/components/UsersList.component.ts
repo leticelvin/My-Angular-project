@@ -1,11 +1,11 @@
-import { Component, Output, EventEmitter, ContentChildren } from '@angular/core';
+import { Component, Output, EventEmitter, Input, ContentChildren } from '@angular/core';
 import { UserListItem } from './UserListItem.component';
 
 @Component({
     selector: "UsersList",
     template: `<div id="LeftGreyBox">
         <ul>
-            {{ UserListItemComponent }}
+            <UserListItem [userlist]="user" [Textcolor]="TextColor"></UserListItem>
         </ul>
         <button (click)="toggleColor()" id="ToggleColorsButton"><h4>Toggle Colors</h4></button>
         </div>`,
@@ -14,12 +14,14 @@ import { UserListItem } from './UserListItem.component';
 
 export class UsersList {
     
-    // <UserListItem [userList]="userlist">
+    // <UserListItem [userlist]="user">
+    // <UserListItem [Textcolor]="TextColor">
 
     public Toggled: Boolean = true;
     public TextColor: String = "red";
     
-    //@Input('userList') userList: any
+    @Input('userlist') public user: Array<string>;
+    
     @ContentChildren(UserListItem)
     UserListItemComponent: UserListItem;
 
@@ -33,15 +35,11 @@ export class UsersList {
             this.Toggled = false;
             this.TextColor = "green";
             this.ColorToggle.emit(this.TextColor)
-            console.log(this.TextColor)
-            console.log(this.Toggled)
         } 
         else {
             this.Toggled = true;
             this.TextColor = "red";
             this.ColorToggle.emit(this.TextColor)
-            console.log(this.TextColor)
-            console.log(this.Toggled)
         }
 
     }
